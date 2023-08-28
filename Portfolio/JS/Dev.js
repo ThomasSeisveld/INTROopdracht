@@ -3,9 +3,9 @@ const createNav = () => {
 
     nav.innerHTML = `
         <div class="nav">
-           <a href="index.html"><img src="img/logo.png" class="brand-logo" alt="" style="width: 200px"></a>
+           <a href="index.html"><img src="" class="brand-logo" alt="" style="width: 200px"></a>
             <div class="nav-items">
-           
+         
                 <a href="Formulier.html"><img src="img/user.png" alt=""></a>
                 <a href="#"><img src="img/cart.png" alt=""></a>
             </div>
