@@ -4,15 +4,15 @@ const createNav = () => {
     nav.innerHTML = `
         <div class="nav">
            <a href="index.html"><img src="" class="brand-logo" alt="" style="width: 200px"></a>
+           
+           
             <div class="nav-items">
-         
-                <a href="Formulier.html"><img src="img/user.png" alt=""></a>
-                <a href="#"><img src="img/cart.png" alt=""></a>
+                <a href="Formulier.html"><img src="img/user.png" alt=""></a>  
             </div>
         </div>
         <ul class="links-container">
             <li class="link-item"><a href="index.html" class="link">Home</a></li>
-            <li class="link-item"><a href="Tutorials.html" class="link">Tutorials</a></li>
+            <li class="link-item"><a href="Projects.html" class="link">Projects</a></li>
             <li class="link-item"><a href="contact.html" class="link">Contact</a></li>
         </ul>
     `;

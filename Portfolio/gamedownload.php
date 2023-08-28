@@ -85,7 +85,7 @@
     <br>
     <div class="download">
         <a><?php echo $button ?></a>
-        <a href="Tutorials.html"><button>Tutorials</button></a>
+        <a href="Projects.html"><button>Tutorials</button></a>
     </div>
 </div>
 </div>
