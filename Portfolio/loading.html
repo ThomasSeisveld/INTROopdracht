@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regen effect</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
+        #rain {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+        }
+
+        #rain canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="rain">
+    <canvas id="raincanvas"></canvas>
+</div>
+
+<script>
+
+    // Set up the rain
+    var c = document.getElementById("raincanvas");
+    c.width = window.innerWidth;
+    c.height = window.innerHeight;
+    var ctx = c.getContext("2d");
+    var mp = 400;
+    var particles = [];
+
+    for (var i = 0; i < mp; i++) {
+        particles.push({
+            x: Math.random() * c.width,
+            y: Math.random() * c.height,
+            r: Math.random() * 10,
+            d: Math.random() * mp,
+        });
+    }
+
+    function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function draw() {
+        let color = "red";
+        ctx.clearRect(0, 0, c.width, c.height);
+        ctx.fillStyle = color;
+        ctx.beginPath();
+
+        for (var i = 0; i < mp; i++) {
+            var p = particles[i];
+            ctx.moveTo(p.x, p.y);
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+        }
+
+        ctx.fill();
+        update();
+    }
+
+    function update() {
+        for (var i = 0; i < mp; i++) {
+            var p = particles[i];
+
+            // Update particle positions
+            p.y += Math.cos(p.d) + 1 + p.r / 26;
+            p.x += Math.sin(p.d) * 15;
+
+            // Reset particles that have fallen off the screen
+            if (p.x > c.width + 5 || p.x < -5 || p.y > c.height) {
+                if (i % 3 > 0) {
+                    particles[i] = { x: Math.random() * c.width, y: -10, r: p.r, d: p.d };
+                } else {
+                    if (Math.sin(p.d) > 0) {
+                        particles[i] = { x: -5, y: Math.random() * c.height, r: p.r, d: p.d };
+                    } else {
+                        particles[i] = { x: c.width + 5, y: Math.random() * c.height, r: p.r, d: p.d };
+                    }
+                }
+            }
+        }
+    }
+
+    setInterval(draw, 33);
+</script>
+</body>
+</html>
