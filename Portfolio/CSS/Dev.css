@@ -31,12 +31,11 @@ Div1{
     display: flex;
     flex-wrap: wrap;
 }
-.container {
+.header-info {
     margin-top: 15px;
     margin-bottom: 15px;
     position: relative;
     text-align: center;
-
   }
   .centered {
     position: absolute;
@@ -48,6 +47,7 @@ Div1{
     font-size: 20px;
       width: 100%;
       margin: 0;
+      padding: 25px;
   }
   #viewHr {
     width: 100%;
@@ -61,7 +61,6 @@ Div1{
     padding-left: 25%;
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.10);
 }
 info-erea {
     width: 100%;
