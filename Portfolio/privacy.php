@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Villa4U</title>
-    <meta charset="UTF-8">  
-
-    <link rel="stylesheet" href="CSS/privacy.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="CSS/Dev.css">
     <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/footer.css">   
+    <link rel="stylesheet" href="CSS/footer.css">
 </head>
 <body>
 <nav class="navbar"></nav>
@@ -200,7 +201,7 @@ if (isset($_GET['id'])) {
                 <a href="privacy.php?id=conditions">Conditions</a>               
                 <a href="privacy.php?id=cookies">Cookies</a>
 
-                &copy2023Villa4u
+                &copyThomas Seisveld
 
                 <a href="privacy.php?id=privacy">Privacy</a>
                 <a href="contact.html">Contact</a>

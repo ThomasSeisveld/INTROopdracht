@@ -107,7 +107,7 @@ const createsign = () => {
         </form>
       </div>
       <div class="panel-footer text-right">
-        <small>&copy;2023Villa4u</small>
+        <small>&copy;Thomas Seisveld</small>
       </div>
     </div>
   </div>
@@ -147,7 +147,7 @@ const createlog = () => {
         </form>
       </div>
       <div class="panel-footer text-right">
-        <small>&copy;2023Villa4u</small>
+        <small>&copy;Thomas Sesiveld</small>
       </div>
     </div>
   </div>
