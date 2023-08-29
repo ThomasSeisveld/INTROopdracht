@@ -49,6 +49,18 @@ Div1{
       margin: 0;
       padding: 25px;
   }
+  .WELKOM{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 20px;
+      width: 100%;
+      margin: 0;
+      padding: 55px;
+      background: rgba(0,0,0,0.6);
+  }
   #viewHr {
     width: 100%;
   }
