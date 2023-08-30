@@ -64,6 +64,9 @@ Div1{
   #viewHr {
     width: 100%;
   }
+  #black{
+      background-color: rgba(0,0,0,0.9);
+  }
 .main-info {
     margin-left: auto;
     margin-right: auto;

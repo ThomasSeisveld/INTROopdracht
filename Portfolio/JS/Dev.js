@@ -14,6 +14,7 @@ const createNav = () => {
             <li class="link-item"><a href="index.html" class="link" style="text-decoration: underline; text-decoration-color: #2AA2D6; text-decoration-thickness: 6px">Home</a></li>
             <li class="link-item"><a href="Projects.html" class="link">Projects</a></li>
             <li class="link-item"><a href="contact.html" class="link">Contact</a></li>
+            <li class="link-item"><a href="ThomasInfo.html" class="link">Contact</a></li>
         </ul>
     `;
 }
