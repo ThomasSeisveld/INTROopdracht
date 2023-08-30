@@ -1,3 +1,5 @@
+
+
 const createNav = () => {
     let nav = document.querySelector('.navbar');
 
@@ -18,7 +20,72 @@ const createNav = () => {
         </ul>
     `;
 }
+createNav();
 
+let config = "menu";
+
+document.getElementById("menu").addEventListener("mouseover", change1);
+document.getElementById("Projects").addEventListener("mouseover", change2);
+
+function change1(){
+    config = "menu";
+}
+function change2(){
+    config = "Projects";
+}
+function mouseOver() {
+    let section = document.querySelector('.hero');
+
+    if (config === "menu") {
+        section.innerHTML = `
+       
+                    <div class="hero__overlay"></div>
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" loading="lazy" class="hero__video">
+                        <source src="img/typetypetype.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="hero__content h-100 container-custom position-relative">
+                        <div class="d-flex h-100 align-items-center hero__content-width">
+                            <div class="text-white">
+                                <h1 class="hero__heading fw-bold mb-4">menu</h1>
+                                <p class="lead mb-4">Ik ben Thomas Seisveld 17 Jaar, en heb deze pagina voor mijzelf gemaakt!</p>
+                                <a href="ThomasInfo.html" class="mt-2 btn btn-lg btn-outline-light" role="button">Reed More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#scroll-down" class="hero__scroll-btn">
+                        Explore <i class="bi bi-arrow-down-short"></i>
+                    </a>
+              
+    `;
+    }
+    if (document === "Projects") {
+        section.innerHTML = `
+       
+                    <div class="hero__overlay"></div>
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" loading="lazy" class="hero__video">
+                        <source src="img/typetypetype.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="hero__content h-100 container-custom position-relative">
+                        <div class="d-flex h-100 align-items-center hero__content-width">
+                            <div class="text-white">
+                                <h1 class="hero__heading fw-bold mb-4">Projects van Thomas</h1>
+                                <p class="lead mb-4">Ik ben Thomas Seisveld 17 Jaar, en heb deze pagina voor mijzelf gemaakt!</p>
+                                <a href="ThomasInfo.html" class="mt-2 btn btn-lg btn-outline-light" role="button">Reed More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#scroll-down" class="hero__scroll-btn">
+                        Explore <i class="bi bi-arrow-down-short"></i>
+                    </a>
+              
+    `;
+    }
+}
+console.log(config)
 const createsign = () => {
     let container = document.querySelector('.container');
 
@@ -155,7 +222,7 @@ const createlog = () => {
     `;
 }
 
-createNav();
+
 
 const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
