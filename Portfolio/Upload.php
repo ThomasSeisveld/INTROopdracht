@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
     <div class="container col-12 m-5">
        <div class="col-6 m-auto">
 
-         <form action="index.php" method="post" class="form-control" enctype="multipart/form-data">
+         <form action="Upload.php" method="post" class="form-control" enctype="multipart/form-data">
             <input type="file" class="form-control" name="choosefile"  id="">
             <div class="col-6 m-auto ">
                 <button type="submit" name="btn_img" class="btn btn-outline-success m-4">
