@@ -23,6 +23,20 @@ if (isset($_POST['submit'])) {
             "<script> alert('Image te groot!') </script>"
             ;
         }
+        else{
+            $newImageName = uniqid();
+            $newImageName .= '.' . $imageExtension;
+
+            move_uploaded_file($tmpName, 'img/', $newImageName);
+            $query = "INSERT INTO tb_upload VALUES('', '$name', '$newImageName')";
+            mysqli_query($conn, $query);
+            echo
+            "<script>
+                    alert('Succesfully Added!')
+                    document.location.href = 'Projects.html'
+               </script>";
+
+        }
     }
 }
 ?>
@@ -73,12 +87,6 @@ if (isset($_POST['submit'])) {
                     <td><a href="delete.php?id=<?php echo $fetch['id'] ?>" class="btn btn-outline-danger">Delete</a></td>
                 </tr>
 
-
-
-                <?php
-                "";
-            } 
-            ?>
         </table>
 
       
