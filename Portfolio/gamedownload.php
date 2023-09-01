@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<<head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +38,7 @@
             $datum = "23 Jun - 2023";
             $button = "<button>Download - Free</button>";
 
-        } elseif ($house_id == "huis2") {
+        } elseif ($house_id == "game2") {
             $genre = "Aventure";
             $duration = "100+ hours";
             $moeilijk = "€ 1.365.000";

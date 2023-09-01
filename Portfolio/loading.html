@@ -39,7 +39,7 @@
     c.width = window.innerWidth;
     c.height = window.innerHeight;
     var ctx = c.getContext("2d");
-    var mp = 400;
+    var mp = 4000;
     var particles = [];
 
     for (var i = 0; i < mp; i++) {
@@ -54,14 +54,14 @@
     function getRandomColor() {
         let letters = '0123456789ABCDEF';
         let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
+        for (let i = 0; i < 62; i++) {
+            color += letters[Math.floor(Math.random() * 1)];
         }
         return color;
     }
 
     function draw() {
-        let color = "red";
+        let color = "white";
         ctx.clearRect(0, 0, c.width, c.height);
         ctx.fillStyle = color;
         ctx.beginPath();
@@ -81,8 +81,8 @@
             var p = particles[i];
 
             // Update particle positions
-            p.y += Math.cos(p.d) + 1 + p.r / 26;
-            p.x += Math.sin(p.d) * 15;
+            p.y += Math.cos(p.d) + 1 + p.r / 260;
+            p.x += Math.sin(p.d) * 20;
 
             // Reset particles that have fallen off the screen
             if (p.x > c.width + 5 || p.x < -5 || p.y > c.height) {
