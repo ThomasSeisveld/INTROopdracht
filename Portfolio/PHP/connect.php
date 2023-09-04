@@ -12,7 +12,7 @@ $number = $_POST['number'];
 // connection
 $serverName = "localhost";
 $UserName = "db_89560";
-$Password = "";
+$Password = "db89560!";
 $DBName = "image";
 
 $conn = mysqli_connect($serverName, $UserName, $Password, $DBName);

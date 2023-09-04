@@ -18,32 +18,6 @@
 
 
 
-<table class="table text-center">
-    <tr>
-        <th>id</th>
-        <th>image</th>
-        <th>button</th>
-
-    </tr>
-
-    <?php
-   $i = 1;
-   $row = mysqli_query($conn, "SELECT * FROM tb_upload ORDER BY id DESK");
-   ?>
-
-
-
-
-
-    <tr>
-        <td><?php echo $i++; ?>1</td>
-        <td width=100px alt=""><?php echo $row["name"]; ?>2</td>
-        <td><img src="img/<?php echo $row['image']; ?>" width="200">3</td>
-    </tr>
-
-</table>
-
-
 <div class="container">
     <div class="main-info">
         <h2><b>Projects</b></h2>
@@ -56,13 +30,13 @@
     <div class="flexbox">
         <div1>
             <a href="gamedownload.php?id=game1"><img src="img/game1.jpg" alt="huis" class="huis-img"></a>
-            <h4 class="huis" style="color: #2AA2D6;">Dragon warriors</h4>
+            <h4 class="huis" style="color: #2AA2D6;"><?php echo $row["name"]; ?></h4>
             <p class="huis">2023</p>
             <p class="huis"><b>Free - Gratis</b></p>
         </div1>
         <div1 style="background-color: lightgrey">
             <a href="gamedownload.php?id=game2"><img src="img/comingsoon.jpg" alt="huis" class="huis-img"></a>
-            <h4 class="huis" style="color: #2AA2D6;">Æro Assault</h4>
+            <h4 class="huis" style="color: #2AA2D6;"><?php echo $row["name"]; ?></h4>
             <p class="huis">2023</p>
             <p class="huis"><b>Coming soon</b></p>
         </div1>
