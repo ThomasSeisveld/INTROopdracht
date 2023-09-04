@@ -1,5 +1,5 @@
 <?php
-require 'PHP/connection.php';
+require 'PHP/connect.php';
 if (isset($_POST['submit'])) {
     $name = $_POST["name"];
     if ($_FILES["image"]["error"] === 4) {
@@ -32,8 +32,8 @@ if (isset($_POST['submit'])) {
             mysqli_query($conn, $query);
             echo
             "<script>
-                    alert('Succesfully Added!')
-                    document.location.href = 'Projects.html'
+                    alert('Succesfully Added!');
+                    document.location.href = 'Projects.php';
                </script>";
 
         }
@@ -79,12 +79,19 @@ if (isset($_POST['submit'])) {
 
             </tr>
 
+<?php
+$i = 1;
+$row = mysqli_query($conn, "SELECT * FROM tb_upload ORDER BY id DESK");
+?>
+
+
+
 
 
                 <tr>
-                    <td><?php echo $fetch['id'] ?></td>
-                    <td><img src="./image/<?php echo $fetch['image'] ?>" width=100px alt=""></td>
-                    <td><a href="delete.php?id=<?php echo $fetch['id'] ?>" class="btn btn-outline-danger">Delete</a></td>
+                    <td><?php echo $i++; ?>1</td>
+                    <td width=100px alt=""><?php echo $row["name"]; ?>2</td>
+                    <td><img src="img/<?php echo $row['image']; ?>" width="200">3</td>
                 </tr>
 
         </table>

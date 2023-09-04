@@ -1,4 +1,5 @@
 <?php
+
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $gender = $_POST['gender'];
@@ -10,9 +11,9 @@ $number = $_POST['number'];
 
 // connection
 $serverName = "localhost";
-$UserName = "root";
+$UserName = "db_89560";
 $Password = "";
-$DBName = "HuizenverkoopDB";
+$DBName = "image";
 
 $conn = mysqli_connect($serverName, $UserName, $Password, $DBName);
 

@@ -18,6 +18,30 @@
 
 
 
+<table class="table text-center">
+    <tr>
+        <th>id</th>
+        <th>image</th>
+        <th>button</th>
+
+    </tr>
+
+    <?php
+   $i = 1;
+   $row = mysqli_query($conn, "SELECT * FROM tb_upload ORDER BY id DESK");
+   ?>
+
+
+
+
+
+    <tr>
+        <td><?php echo $i++; ?>1</td>
+        <td width=100px alt=""><?php echo $row["name"]; ?>2</td>
+        <td><img src="img/<?php echo $row['image']; ?>" width="200">3</td>
+    </tr>
+
+</table>
 
 
 <div class="container">
