@@ -39,7 +39,7 @@
     c.width = window.innerWidth;
     c.height = window.innerHeight;
     var ctx = c.getContext("2d");
-    var mp = 4000;
+    var mp = 100;
     var particles = [];
 
     for (var i = 0; i < mp; i++) {
@@ -81,8 +81,8 @@
             var p = particles[i];
 
             // Update particle positions
-            p.y += Math.cos(p.d) + 1 + p.r / 260;
-            p.x += Math.sin(p.d) * 20;
+            p.y += Math.cos(p.d) + 0,1 + p.r / 0,1;
+            p.x += Math.sin(p.d) * 0,2;
 
             // Reset particles that have fallen off the screen
             if (p.x > c.width + 5 || p.x < -5 || p.y > c.height) {

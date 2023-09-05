@@ -26,43 +26,8 @@
             <br><br>
 
         </p>
-    </div>
-    <?php
-include "PHP/Print.php";
-    // Controleren of er resultaten zijn
-    if ($result->num_rows > 0) {
-        // Loop door de resultaten en toon ze in flexbox
-        while ($row = $result->fetch_assoc()) {
-            echo '<div class="product">';
-            echo '<img src="' . $row["image"] . '" alt="' . $row["naam"] . '">';
-            echo '<h2>' . $row["naam"] . '</h2>';
-            echo '<p>' . $row["omschrijving"] . '</p>';
-            echo '</div>';
-        }
-    } else {
-        echo "Geen producten gevonden in de database.";
-    }
 
-    // Databaseverbinding sluiten
-    $conn->close();
-    ?>
-    ?>
-    <div class="flexbox">
-        <div1>
-            <a href="gamedownload.php?id=game1"><img src="img/game1.jpg" alt="huis" class="huis-img"></a>
-            <h4 class="huis" style="color: #2AA2D6;"><?php echo $row["name"]; ?></h4>
-            <p class="huis">2023</p>
-            <p class="huis"><b>Free - Gratis</b></p>
-        </div1>
-        <div1 style="background-color: lightgrey">
-            <a href="gamedownload.php?id=game2"><img src="img/comingsoon.jpg" alt="huis" class="huis-img"></a>
-            <h4 class="huis" style="color: #2AA2D6;"><?php echo $row["name"]; ?></h4>
-            <p class="huis">2023</p>
-            <p class="huis"><b>Coming soon</b></p>
-        </div1>
     </div>
-</div>
-
 
 
 <div class="footer">
