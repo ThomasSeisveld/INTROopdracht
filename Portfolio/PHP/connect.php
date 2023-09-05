@@ -1,11 +1,11 @@
 <?php
+
+
 // connection
 $serverName = "localhost";
 $UserName = "db_89560";
 $Password = "db89560!";
 $DBName = "Images";
-
-global $conn;
 
 $conn = mysqli_connect($serverName, $UserName, $Password, $DBName);
 
@@ -14,6 +14,5 @@ if (!$conn) {
 }
 
 else {
-    print("Succes");
+   echo "succes connection";
 }
-
