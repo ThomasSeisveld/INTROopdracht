@@ -13,7 +13,7 @@ const createNav = () => {
             </div>
         </div>
         <ul class="links-container">
-            <li class="link-item"><a href="index.html" class="link" style="text-decoration: underline; text-decoration-color: #2AA2D6; text-decoration-thickness: 6px">Home</a></li>
+            <li class="link-item"><a href="index.html" class="link">Home</a></li>
             <li class="link-item"><a href="Projects.php" class="link">Projects</a></li>
             <li class="link-item"><a href="ThomasInfo.html" class="link">About Me!</a></li>
             <li class="link-item"><a href="contact.html" class="link">Contact</a></li>
@@ -22,7 +22,32 @@ const createNav = () => {
 }
 createNav();
 
-let config = "menu";
+const setActiveLink = () => {
+    // Haal de huidige URL van de pagina op
+    const currentUrl = window.location.href;
+
+    // Selecteer alle link-items
+    const linkItems = document.querySelectorAll('.link-item');
+
+    // Loop door alle link-items
+    linkItems.forEach(linkItem => {
+        // Haal de href-attribuutwaarde van de link op
+        const linkHref = linkItem.querySelector('a').getAttribute('href');
+
+        // Controleer of de huidige URL overeenkomt met de link
+        if (currentUrl.includes(linkHref)) {
+            // Voeg een klasse toe aan de link-item om de stijl te wijzigen (bijvoorbeeld onderstreping)
+            linkItem.classList.add('active-link');
+        }
+    });
+};
+
+setActiveLink();
+
+
+
+
+    let config = "menu";
 
 document.getElementById("menu").addEventListener("mouseover", change1);
 document.getElementById("Projects").addEventListener("mouseover", change2);
