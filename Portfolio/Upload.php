@@ -1,5 +1,5 @@
 <?php
-require 'PHP/connect.php';
+require '';
 if (isset($_POST['submit'])) {
     $name = $_POST["name"];
     if ($_FILES["image"]["error"] === 4) {
@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
             echo
             "<script>
                     alert('Succesfully Added!');
-                    document.location.href = 'Projects.php';
+                    document.location.href = '';
                </script>";
 
         }

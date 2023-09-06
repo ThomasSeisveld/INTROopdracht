@@ -27,40 +27,31 @@
 
         </p>
     </div>
+    <div class="flexbox">
     <?php
 include "PHP/connect.php";
 global $conn;
     $query = "SELECT name, Discription, Image FROM Images";
+    $result = mysqli_query($conn, $query);
 
+    if (mysqli_num_rows($result) > 0) {
 
-    $result = $conn->query($query);
+        while ($row = mysqli_fetch_assoc($result)) {
 
-    if ($result->num_rows > 0) {
-        // Loop door de resultaten en toon ze in flexbox
-        while ($row = $result->fetch_assoc()) {
-            echo '<div class="product">';
-            echo '<img src="' . $row["Image"] . '" alt="' . $row["name"] . '">';
-            echo '<h2>' . $row["name"] . '</h2>';
-            echo '<p>' . $row["Discription"] . '</p>';
-            echo '</div>';
+            ?>
+            <div1>
+                <a href="gamedownload.php?id=game1"><img src="<?= $row["Image"]?>" alt="<?= $row["name"]?>" class="huis-img"></a>
+                <h4 class="huis" style="color: #2AA2D6;"><?=$row["name"]?></h4>
+                <p class="huis">2021</p>
+                <p class="huis"><b>Free - Download</b></p>
+            </div1>
+            <?php
         }
-    } else {
-        echo "Geen producten gevonden in de database.";
+    }
+    if (!$result) {
+        die("Databasefout: " . mysqli_error($conn));
     }
     ?>
-    <div class="flexbox">
-        <div1>
-            <a href="gamedownload.php?id=game1"><img src="img/game1.jpg" alt="huis" class="huis-img"></a>
-            <h4 class="huis" style="color: #2AA2D6;"></h4>
-            <p class="huis">2023</p>
-            <p class="huis"><b>Free - Gratis</b></p>
-        </div1>
-        <div1 style="background-color: lightgrey">
-            <a href="gamedownload.php?id=game2"><img src="img/comingsoon.jpg" alt="huis" class="huis-img"></a>
-            <h4 class="huis" style="color: #2AA2D6;"></h4>
-            <p class="huis">2023</p>
-            <p class="huis"><b>Coming soon</b></p>
-        </div1>
     </div>
 </div>
 
